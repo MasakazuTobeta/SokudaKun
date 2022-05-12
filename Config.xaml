@@ -19,11 +19,11 @@
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
-        <CheckBox Content="Set start keys :" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Center" Grid.ColumnSpan="2" Checked="RadioButton_Checked"/>
-        <TextBox HorizontalAlignment="Stretch" Margin="10,0,10,0" Grid.Row="1" Text="F10" TextWrapping="Wrap" VerticalAlignment="Center" AllowDrop="False" Focusable="False" Grid.ColumnSpan="2"/>
-        <CheckBox Content="Set stop keys :" HorizontalAlignment="Left" Margin="10,0,10,0" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2" Checked="RadioButton_Checked_1"/>
-        <TextBox HorizontalAlignment="Stretch" Margin="10,0,10,0" Grid.Row="3" Text="Alt" TextWrapping="Wrap" VerticalAlignment="Center" AllowDrop="False" Focusable="False" Grid.ColumnSpan="2"/>
-        <Button Content=" Cancel " HorizontalAlignment="Center" Margin="10,6,10,6" Grid.Row="4" VerticalAlignment="Center" FontSize="14"/>
-        <Button Content="   OK   " Grid.Column="1" HorizontalAlignment="Center" Margin="10,6,10,6" Grid.Row="4" VerticalAlignment="Center" FontSize="14" FontWeight="Bold"/>
+        <CheckBox x:Name="StartCBox" Content="Set start keys :" HorizontalAlignment="Left" Margin="10,10,10,0" VerticalAlignment="Center" Grid.ColumnSpan="2" Checked="StartCBox_Checked" IsTabStop="False"/>
+        <TextBox x:Name="StartTBox" HorizontalAlignment="Stretch" Margin="10,0,10,0" Grid.Row="1" Text="F10" TextWrapping="Wrap" VerticalAlignment="Center" AllowDrop="False" Grid.ColumnSpan="2" IsTabStop="False"/>
+        <CheckBox x:Name="StopCBox" Content="Set stop keys :" HorizontalAlignment="Left" Margin="10,0,10,0" Grid.Row="2" VerticalAlignment="Center" Grid.ColumnSpan="2" Checked="StopCBox_Checked" IsTabStop="False"/>
+        <TextBox x:Name="StopTBox" HorizontalAlignment="Stretch" Margin="10,0,10,0" Grid.Row="3" Text="Alt" TextWrapping="Wrap" VerticalAlignment="Center" AllowDrop="False" Grid.ColumnSpan="2" IsTabStop="False"/>
+        <Button x:Name="Cancel" Content=" Cancel " HorizontalAlignment="Center" Margin="10,6,10,6" Grid.Row="4" VerticalAlignment="Center" FontSize="14" Click="Cancel_Click" IsTabStop="False"/>
+        <Button x:Name="OK" Content="   OK   " Grid.Column="1" HorizontalAlignment="Center" Margin="10,6,10,6" Grid.Row="4" VerticalAlignment="Center" FontSize="14" FontWeight="Bold" Click="OK_Click" IsTabStop="False"/>
     </Grid>
 </Window>

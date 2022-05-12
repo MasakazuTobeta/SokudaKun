@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace SokudaKun
 {
@@ -182,13 +184,32 @@ namespace SokudaKun
             });
             return string.Join("+", ret);
         }
+
+        public List<keycode> DeepCopyKeys(List<keycode> keys)
+        {
+            List<keycode> result;
+            XmlSerializer serializer = new XmlSerializer(typeof(List<keycode>));
+            MemoryStream mem = new MemoryStream();
+            try
+            {
+                serializer.Serialize(mem, keys);
+                mem.Position = 0;
+                result = (List<keycode>)serializer.Deserialize(mem);
+            }
+            finally
+            {
+                mem.Close();
+            }
+            return result;
+
+        }
     }
 
     public class Settings
     {
-        private List<keycode> _start_keys;
-        private List<keycode> _stop_keys;
-        private uint _cycle;
+        private List<keycode> _start_keys = new List<keycode>();
+        private List<keycode> _stop_keys = new List<keycode>();
+        private uint _cycle = 0;
 
         public List<keycode> StartKeys
         {
@@ -206,12 +227,22 @@ namespace SokudaKun
             get { return _cycle; }
             set { _cycle = value; }
         }
-
-        public Settings()
+        public static Settings DeepCopy(Settings _settings)
         {
-            _start_keys = new List<keycode>() { keycode.F10 };
-            _stop_keys = new List<keycode>() { keycode.LAlt };
-            _cycle = 1000;
+            Settings result;
+            XmlSerializer serializer = new XmlSerializer(typeof(Settings));
+            MemoryStream mem = new MemoryStream();
+            try
+            {
+                serializer.Serialize(mem, _settings);
+                mem.Position = 0;
+                result = (Settings)serializer.Deserialize(mem);
+            }
+            finally
+            {
+                mem.Close();
+            }
+            return result;
         }
     }
 }
