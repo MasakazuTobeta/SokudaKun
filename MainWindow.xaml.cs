@@ -50,6 +50,12 @@ namespace SokudaKun
             this.LoadSettings();
             this.ShowSettings();
         }
+        protected virtual void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.settings.Cycle = int.Parse(this.CycleBox.Text);
+            this.SaveSettings();
+        }
+
         private void SaveSettings()
         {
             System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Settings));
@@ -123,14 +129,14 @@ namespace SokudaKun
                     this.state = State.Running;
                     this.BtnConfig.IsEnabled = false;
                     this.CycleBox.IsEnabled = false;
-                    int _sleep = int.Parse(this.CycleBox.Text);
+                    this.settings.Cycle = int.Parse(this.CycleBox.Text);
                     Task.Run(() => {
                         while (true)
                         {
                             if (this.state == State.Running)
                             {
                                 this.DoClick();
-                                Thread.Sleep(_sleep);
+                                Thread.Sleep(this.settings.Cycle);
                             }
                             else break;
                         }

@@ -209,7 +209,7 @@ namespace SokudaKun
     {
         private List<keycode> _start_keys = new List<keycode>();
         private List<keycode> _stop_keys = new List<keycode>();
-        private uint _cycle = 0;
+        private int _cycle = 1000;
 
         public List<keycode> StartKeys
         {
@@ -222,7 +222,7 @@ namespace SokudaKun
             set { _stop_keys = value; }
         }
 
-        public uint Cycle
+        public int Cycle
         {
             get { return _cycle; }
             set { _cycle = value; }

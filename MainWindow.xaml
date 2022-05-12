@@ -1,4 +1,4 @@
-﻿<Window x:Class="SokudaKun.MainWindow"
+﻿<Window x:Name="SokudaKun" x:Class="SokudaKun.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SokudaKun"
         mc:Ignorable="d"
         MinHeight="130" MinWidth="260" MaxHeight="260" MaxWidth="520"
-        Title="MainWindow" Height="130" Width="260">
+        Title="速打くん" Height="130" Width="260" Closing="Window_Closing">
     <Grid Margin="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
