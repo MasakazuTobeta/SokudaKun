@@ -5,6 +5,22 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>click.ico</ApplicationIcon>
+    <Authors>Masakazu Tobeta</Authors>
+    <Version>1.0.1</Version>
+    <Company>TOBETA</Company>
+    <Product>速打くん</Product>
+    <Copyright>TOBETA</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <Description>任意の間隔でマウスをクリックする連打ソフト</Description>
+    <PackageProjectUrl>https://github.com/MasakazuTobeta/SokudaKun</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MasakazuTobeta/SokudaKun</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +36,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
