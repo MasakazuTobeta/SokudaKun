@@ -28,7 +28,7 @@ Set stop keysのチェックボックスをON[✓]し、任意のキーを入力
 https://github.com/MasakazuTobeta/SokudaKun/issues
 
 ## ライセンス
-- MIT License
+- [MIT License](https://github.com/MasakazuTobeta/SokudaKun/blob/master/LICENSE.md)
 - フリーウェア
 - 商用利用可
 
