@@ -6,9 +6,9 @@
 Windows 10(32/64bit), 11(32/64bit)
 
 ## 追加のライブラリ
-[.NET 3.1 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/3.1/runtime?cid=getdotnetcore)のインストールが必要。
+[.NET 6 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore)のインストールが必要。
 
-[Downloadページ](https://dotnet.microsoft.com/en-us/download/dotnet/3.1/runtime?cid=getdotnetcore)から、「Run desktop apps」の「[Download x64](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-3.1.25-windows-x86-installer)」もしくは「[Download x86](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-3.1.25-windows-x64-installer)（32bit OS）」をダウンロードしインストール。
+[Downloadページ](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?cid=getdotnetcore)から、「Run desktop apps」の「[Download x64](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-6.0.13-windows-x64-installer)」もしくは「[Download x86](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-6.0.13-windows-x86-installer)（32bit OS）」をダウンロードしインストール。
 
 ## 使い方
 ### クリック間隔設定
